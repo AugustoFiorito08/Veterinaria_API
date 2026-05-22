@@ -296,8 +296,6 @@ C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\bin\Debug\net10.0\run
 C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\obj\Debug\net10.0\VeterinariaApi.csproj.AssemblyReference.cache
 C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\obj\Debug\net10.0\rpswa.dswa.cache.json
 C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\obj\Debug\net10.0\VeterinariaApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\obj\Debug\net10.0\VeterinariaApi.AssemblyInfoInputs.cache
-C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\obj\Debug\net10.0\VeterinariaApi.AssemblyInfo.cs
 C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\obj\Debug\net10.0\VeterinariaApi.csproj.CoreCompileInputs.cache
 C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\obj\Debug\net10.0\VeterinariaApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\franc\Desktop\ICES\Veterinaria_API\VeterinariaApi\obj\Debug\net10.0\VeterinariaApi.MvcApplicationPartsAssemblyInfo.cache

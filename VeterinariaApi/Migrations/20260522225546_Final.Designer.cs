@@ -12,8 +12,8 @@ using VeterinariaApi.Datos;
 namespace VeterinariaApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260522203148_Actualizacion")]
-    partial class Actualizacion
+    [Migration("20260522225546_Final")]
+    partial class Final
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -18,13 +18,13 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 builder.Services.AddScoped<ITipoRepository, TipoRepository>();
 builder.Services.AddScoped<ITipoLogica, TipoLogica>();
 
-// Repositorios
+
 builder.Services.AddScoped<IDuenioRepository, DuenioRepository>();
 builder.Services.AddScoped<IRazaRepository, RazaRepository>();
 builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
 builder.Services.AddScoped<IAtencionRepository, AtencionRepository>();
 
-// Lógica
+
 builder.Services.AddScoped<IDuenioLogica, DuenioLogica>();
 builder.Services.AddScoped<IRazaLogica, RazaLogica>();
 builder.Services.AddScoped<IAnimalLogica, AnimalLogica>();
