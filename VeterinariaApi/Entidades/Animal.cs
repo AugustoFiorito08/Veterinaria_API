@@ -22,5 +22,5 @@ public class Animal
 
     public Duenio? Duenio { get; set; }
 
-    public List<Atencion> Atenciones { get; set; } = [];
+    public List<Atencion> Atenciones { get; set; } = new List<Atencion>();
 }

@@ -15,27 +15,16 @@ public static class TipoEndpoints
             return Results.Ok(tipos);
         });
 
-        // GET POR ID
-        app.MapGet("/tipos/{id}", async (
-            int id,
-            ITipoLogica logica) =>
-        {
-            var tipo = await logica.GetTipoByIdAsync(id);
-
-            if (tipo is null)
-                return Results.NotFound();
-
-            return Results.Ok(tipo);
-        });
-
-        // POST
         app.MapPost("/tipos", async (
             TipoCreateDto dto,
             ITipoLogica logica) =>
         {
-            await logica.AgregarTipoAsync(dto);
+            if (string.IsNullOrWhiteSpace(dto.Descripcion))
+                return Results.BadRequest("Descripcion es obligatoria.");
 
-            return Results.Created("/tipos", dto);
+            var creado = await logica.AgregarTipoAsync(dto);
+
+            return Results.Created($"/tipos/{creado.Id}", creado);
         });
     }
 }
