@@ -6,11 +6,9 @@ namespace VeterinariaApi.Logica;
 
 public interface ITipoLogica
 {
-    Task<IEnumerable<Tipo>> GetTiposAsync();
+    Task<IEnumerable<TipoDto>> GetTiposAsync();
 
-    Task<Tipo?> GetTipoByIdAsync(int id);
-
-    Task AgregarTipoAsync(TipoCreateDto dto);
+    Task<TipoDto> AgregarTipoAsync(TipoCreateDto dto);
 }
 
 public class TipoLogica : ITipoLogica
@@ -22,23 +20,22 @@ public class TipoLogica : ITipoLogica
         _tipoRepository = tipoRepository;
     }
 
-    public async Task<IEnumerable<Tipo>> GetTiposAsync()
+    public async Task<IEnumerable<TipoDto>> GetTiposAsync()
     {
-        return await _tipoRepository.ObtenerTodos();
+        var tipos = await _tipoRepository.ObtenerTodos();
+
+        return tipos.Select(t => new TipoDto(t.Id, t.Descripcion));
     }
 
-    public async Task<Tipo?> GetTipoByIdAsync(int id)
-    {
-        return await _tipoRepository.ObtenerPorId(id);
-    }
-
-    public async Task AgregarTipoAsync(TipoCreateDto dto)
+    public async Task<TipoDto> AgregarTipoAsync(TipoCreateDto dto)
     {
         var tipo = new Tipo
         {
             Descripcion = dto.Descripcion
         };
 
-        await _tipoRepository.Agregar(tipo);
+        var creado = await _tipoRepository.Agregar(tipo);
+
+        return new TipoDto(creado.Id, creado.Descripcion);
     }
 }
